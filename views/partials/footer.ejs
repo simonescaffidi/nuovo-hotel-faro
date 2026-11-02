@@ -1,0 +1,51 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-brand">Nuovo Hotel Faro <span aria-hidden="true">★★</span></p>
+      <p><%= t.ui.stars %></p>
+      <p><a href="<%= HOTEL.facebook %>" target="_blank" rel="noopener"><%= t.ui.followUs %></a></p>
+    </div>
+    <div>
+      <p><strong><%= t.ui.address %></strong><br><%= HOTEL.street %><br><%= HOTEL.zip %> <%= HOTEL.city %> (<%= HOTEL.province %>) – Italia</p>
+    </div>
+    <div>
+      <p><strong><%= t.ui.phone %></strong><br><a href="tel:<%= HOTEL.phoneHref %>"><%= HOTEL.phone %></a></p>
+      <p><strong><%= t.ui.email %></strong><br><a href="mailto:<%= HOTEL.email %>"><%= HOTEL.email %></a></p>
+    </div>
+    <nav aria-label="Link">
+      <ul class="footer-links">
+        <% t.nav.forEach(function(n){ %><li><a href="<%= n.path %>"><%= n.label %></a></li><% }) %>
+        <% t.legalNav.forEach(function(n){ %><li><a href="<%= n.path %>"><%= n.label %></a></li><% }) %>
+        <li><button type="button" class="linklike" data-consent-open><%= t.ui.manageCookies %></button></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <%= year %> Nuovo Hotel Faro – <%= t.ui.allRights %></p>
+    <p class="powered-by">Powered by <a href="https://www.simonescaffidi.it" target="_blank" rel="noopener noreferrer">www.simonescaffidi.it</a></p>
+  </div>
+</footer>
+
+<a class="call-fab" href="tel:<%= HOTEL.phoneHref %>" aria-label="<%= t.ui.call %> <%= HOTEL.phone %>"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg></a>
+
+<div class="consent" id="consent" role="dialog" aria-modal="false" aria-labelledby="consent-title" hidden>
+  <div class="consent-box">
+    <p class="consent-title" id="consent-title"><%= t.consent.title %></p>
+    <p><%= t.consent.text %> <a href="<%= routes.cookie[lang] %>"><%= t.consent.policy %></a></p>
+    <div class="consent-prefs" hidden>
+      <label><input type="checkbox" checked disabled> <%= t.consent.necessary %></label>
+      <label><input type="checkbox" name="analytics"> <%= t.consent.analytics %></label>
+      <label><input type="checkbox" name="external"> <%= t.consent.external %></label>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-ghost" data-consent="reject"><%= t.consent.reject %></button>
+      <button type="button" class="btn btn-ghost" data-consent="customize"><%= t.consent.customize %></button>
+      <button type="button" class="btn btn-ghost" data-consent="save" hidden><%= t.consent.save %></button>
+      <button type="button" class="btn" data-consent="accept"><%= t.consent.accept %></button>
+    </div>
+  </div>
+</div>
+<script src="/assets/consent.js?v=1" defer></script>
+<script src="/assets/main.js?v=1" defer></script>
+</body>
+</html>

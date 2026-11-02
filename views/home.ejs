@@ -1,0 +1,72 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main id="main">
+  <section class="hero">
+    <%- include('partials/img', { name: 'faro-capo-dorlando', alt: lang === 'it' ? "Il Faro di Capo d'Orlando sul mare, accanto all'hotel" : "The Capo d'Orlando lighthouse by the sea, next to the hotel", sizes: '100vw', eager: true, cls: 'hero-img' }) %>
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <p class="kicker"><%= page.heroKicker %></p>
+      <h1><%= page.h1 %></h1>
+      <p class="hero-text"><%= page.heroText %></p>
+      <div class="hero-actions">
+        <a class="btn btn-lg" href="<%= routes.contatti[lang] %>"><%= t.ui.book %></a>
+        <a class="btn btn-lg btn-light" href="tel:<%= HOTEL.phoneHref %>"><%= t.ui.call %> <%= HOTEL.phone %></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2><%= page.introTitle %></h2>
+        <% page.intro.forEach(function(p){ %><p><%- p %></p><% }) %>
+        <p><a class="arrow" href="<%= routes.hotel[lang] %>"><%= t.ui.readMore %></a></p>
+      </div>
+      <figure class="photo">
+        <%- include('partials/img', { name: 'colazione-vista-mare', alt: lang === 'it' ? 'Tavolo della colazione in terrazza con vista mare' : 'Breakfast table on the terrace with sea view' }) %>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="wrap">
+      <ul class="highlights">
+        <% page.highlights.forEach(function(h){ %>
+        <li>
+          <span class="hl-icon hl-<%= h.icon %>" aria-hidden="true"></span>
+          <h3><%= h.title %></h3>
+          <p><%= h.text %></p>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split split-rev">
+      <figure class="photo">
+        <%- include('partials/img', { name: 'aperifaro-tramonto', alt: lang === 'it' ? 'Apericena al tramonto sulla terrazza solarium' : 'Sunset aperitif on the sun terrace' }) %>
+      </figure>
+      <div>
+        <h2><%= page.servicesTitle %></h2>
+        <ul class="checklist">
+          <% page.services.forEach(function(s){ %><li><%= s %></li><% }) %>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap cta-inner">
+      <div>
+        <h2><%= page.ctaTitle %></h2>
+        <p><%= page.ctaText %></p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-lg btn-light" href="<%= routes.contatti[lang] %>"><%= t.ui.book %></a>
+        <a class="cta-phone" href="tel:<%= HOTEL.phoneHref %>"><%= HOTEL.phone %></a>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>

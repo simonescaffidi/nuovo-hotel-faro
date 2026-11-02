@@ -1,0 +1,12 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main id="main">
+  <section class="section page-top">
+    <div class="wrap narrow">
+      <h1><%= page.h1 %></h1>
+      <p class="lead"><%= page.text %></p>
+      <p><a class="btn" href="<%= routes.home[lang] %>"><%= page.back %></a></p>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>

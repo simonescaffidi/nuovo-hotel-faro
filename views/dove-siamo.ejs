@@ -1,0 +1,32 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main id="main">
+  <section class="section page-top">
+    <div class="wrap narrow">
+      <h1><%= page.h1 %></h1>
+      <p class="lead"><%= page.lead %></p>
+    </div>
+  </section>
+
+  <section class="section pt0">
+    <div class="wrap split">
+      <div>
+        <h2><%= page.howTitle %></h2>
+        <dl class="how">
+          <% page.how.forEach(function(h){ %><dt><%= h.mode %></dt><dd><%= h.text %></dd><% }) %>
+        </dl>
+      </div>
+      <div>
+        <h2><%= page.mapTitle %></h2>
+        <div class="map" data-map-src="<%= HOTEL.mapsEmbed %>" data-map-title="<%= page.mapTitle %> – Nuovo Hotel Faro">
+          <div class="map-placeholder">
+            <p><%= page.mapNotice %></p>
+            <button type="button" class="btn" data-map-load><%= page.mapLoad %></button>
+            <a class="arrow" href="<%= HOTEL.mapsUrl %>" target="_blank" rel="noopener"><%= page.mapOpen %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>

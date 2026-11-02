@@ -1,0 +1,35 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main id="main">
+  <section class="page-hero">
+    <%- include('partials/img', { name: 'faro-capo-dorlando', alt: lang === 'it' ? "Il Faro e il mare di Capo d'Orlando" : "The lighthouse and the sea at Capo d'Orlando", sizes: '100vw', eager: true, cls: 'hero-img' }) %>
+    <div class="hero-overlay"></div>
+    <div class="wrap"><h1><%= page.h1 %></h1></div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <p class="lead"><%= page.lead %></p>
+      <% page.body.forEach(function(p){ %><p><%= p %></p><% }) %>
+      <h2><%= page.excursionsTitle %></h2>
+      <ul class="checklist">
+        <% page.excursions.forEach(function(s){ %><li><%= s %></li><% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="wrap">
+      <h2><%= page.placesTitle %></h2>
+      <div class="places">
+        <% page.places.forEach(function(p){ %>
+        <article class="place" id="<%= p.id %>">
+          <h3><%= p.name %></h3>
+          <p><%= p.text %></p>
+        </article>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>

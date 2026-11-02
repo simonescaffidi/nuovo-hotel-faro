@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= page.title %></title>
+<meta name="description" content="<%= page.description %>">
+<% if (path) { %><link rel="canonical" href="<%= PUBLIC_URL + path %>">
+<link rel="alternate" hreflang="it" href="<%= PUBLIC_URL + routes[key].it %>">
+<link rel="alternate" hreflang="en" href="<%= PUBLIC_URL + routes[key].en %>">
+<link rel="alternate" hreflang="x-default" href="<%= PUBLIC_URL + routes[key].it %>"><% } else { %><meta name="robots" content="noindex"><% } %>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nuovo Hotel Faro">
+<meta property="og:title" content="<%= page.title %>">
+<meta property="og:description" content="<%= page.description %>">
+<meta property="og:image" content="<%= PUBLIC_URL %>/img/og-image.jpg">
+<meta property="og:locale" content="<%= t.locale %>">
+<% if (path) { %><meta property="og:url" content="<%= PUBLIC_URL + path %>"><% } %>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f3b57">
+<% if (GSC_VERIFICATION) { %><meta name="google-site-verification" content="<%= GSC_VERIFICATION %>"><% } %>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css?v=1">
+<script type="application/ld+json"><%- JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'Hotel', name: HOTEL.name, url: PUBLIC_URL + '/',
+  image: PUBLIC_URL + '/img/og-image.jpg', telephone: HOTEL.phone, email: HOTEL.email,
+  starRating: { '@type': 'Rating', ratingValue: '2' }, numberOfRooms: 27, petsAllowed: true,
+  checkinTime: '14:00', checkoutTime: '10:00',
+  address: { '@type': 'PostalAddress', streetAddress: HOTEL.street, postalCode: HOTEL.zip, addressLocality: HOTEL.city, addressRegion: HOTEL.province, addressCountry: 'IT' },
+  geo: { '@type': 'GeoCoordinates', latitude: HOTEL.lat, longitude: HOTEL.lng },
+  sameAs: [HOTEL.facebook],
+  amenityFeature: ['Free Wi-Fi', 'Air conditioning', 'Bar', 'Sun terrace', 'Garage'].map(n => ({ '@type': 'LocationFeatureSpecification', name: n, value: true }))
+}).replace(/</g, '\\u003c') %></script>
+</head>
+<body data-ga="<%= GA4_ID %>" data-lang="<%= lang %>">
+<a class="skip" href="#main"><%= t.ui.skip %></a>

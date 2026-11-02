@@ -1,0 +1,192 @@
+{
+  "lang": "en",
+  "locale": "en_GB",
+  "ui": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "book": "Check availability",
+    "call": "Call",
+    "langSwitch": "Italiano",
+    "langSwitchShort": "IT",
+    "readMore": "Learn more",
+    "allRights": "All rights reserved",
+    "manageCookies": "Manage cookies",
+    "followUs": "Follow us on Facebook",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "stars": "2-star hotel · 27 rooms · 43 beds"
+  },
+  "nav": [
+    { "key": "home", "label": "Home", "path": "/en/" },
+    { "key": "hotel", "label": "The Hotel", "path": "/en/hotel" },
+    { "key": "camere", "label": "Rooms", "path": "/en/rooms" },
+    { "key": "territorio", "label": "The Area", "path": "/en/area" },
+    { "key": "dove-siamo", "label": "Getting here", "path": "/en/getting-here" },
+    { "key": "contatti", "label": "Contact", "path": "/en/contact" }
+  ],
+  "legalNav": [
+    { "key": "privacy", "label": "Privacy Policy", "path": "/en/privacy" },
+    { "key": "cookie", "label": "Cookie Policy", "path": "/en/cookies" }
+  ],
+  "pages": {
+    "home": {
+      "title": "Nuovo Hotel Faro – Seafront hotel in Capo d'Orlando, Sicily",
+      "description": "Seafront hotel in Capo d'Orlando, beneath the lighthouse and facing the Aeolian Islands. Sea-view rooms, terrace breakfast, steps from the town centre.",
+      "heroKicker": "Capo d'Orlando · Sicily",
+      "h1": "Nuovo Hotel Faro",
+      "heroText": "On the Capo d'Orlando seafront, at the foot of the lighthouse and facing the Aeolian Islands.",
+      "introTitle": "The sea below your window, the town centre a short walk away",
+      "intro": [
+        "<strong>Nuovo Hotel Faro</strong> (2 stars, 43 beds) overlooks the Tyrrhenian Sea, facing the <strong>Aeolian Islands</strong>, on the beautiful seafront of Capo d'Orlando, just steps from the town centre.",
+        "It is a two-hour drive from <strong>Palermo</strong> and <strong>Catania</strong> airports, one hour by motorway from <strong>Cefalù</strong> and 900 metres from the railway station."
+      ],
+      "highlights": [
+        { "icon": "sea", "title": "Sea views", "text": "Some rooms face the sea, with a balcony or a large window; the others overlook Monte Santuario." },
+        { "icon": "coffee", "title": "Breakfast on the terrace", "text": "Quality artisan products, served indoors or in the flower-filled outdoor room by the sea." },
+        { "icon": "sun", "title": "Sun terrace", "text": "Sunset aperitif dinners with music and breathtaking views of the Aeolian Islands." },
+        { "icon": "paw", "title": "Pet friendly", "text": "Four-legged friends are welcome." }
+      ],
+      "servicesTitle": "Everything you need for your holiday",
+      "services": [
+        "Partner restaurants serving traditional Sicilian meat and fish dishes",
+        "Hotel bar with indoor and outdoor breakfast room",
+        "TV room and sun terrace",
+        "Garage for cars, motorbikes and bicycles",
+        "Car, motorbike and boat hire through partner agencies",
+        "Tours of Sicily and the Aeolian Islands departing from Capo d'Orlando marina",
+        "Excursions in the Nebrodi Mountains",
+        "Free beach umbrellas on request"
+      ],
+      "ctaTitle": "Book directly with us",
+      "ctaText": "Write or call us: we will offer you our best rate for your dates."
+    },
+    "hotel": {
+      "title": "The Hotel – Nuovo Hotel Faro Capo d'Orlando",
+      "description": "Nuovo Hotel Faro on the Andrea Doria seafront, below Monte Santuario: bar, breakfast room, sun terrace, TV room and garage.",
+      "h1": "The Hotel",
+      "lead": "Nuovo Hotel Faro stands on the <strong>“Andrea Doria”</strong> seafront, at the foot of <strong>Monte Santuario</strong>. The headland and the <strong>legendary lighthouse</strong> make the surroundings enchanting and magical.",
+      "body": [
+        "Guests are lulled by the sound of the sea and the cry of the gulls circling the lighthouse tower, the fishermen's “sentinel” and symbol of Capo d'Orlando.",
+        "In the morning you can enjoy a generous, varied breakfast of quality artisan products, in the cosy indoor room or in the flower-filled outdoor room with its relaxing sea view.",
+        "On the sun terrace we host sunset aperitif dinners with music and views of the Aeolian Islands."
+      ],
+      "servicesTitle": "Hotel services",
+      "services": ["Bar", "Indoor and outdoor breakfast room", "Sun terrace", "TV room", "Garage for cars, motorbikes and bicycles", "Free Wi-Fi", "Pets allowed"],
+      "extra": "Through our partner agencies you can hire cars, motorbikes and boats and book organised tours of Sicily and the Aeolian Islands.",
+      "galleryTitle": "A look at the hotel"
+    },
+    "camere": {
+      "title": "Rooms – Nuovo Hotel Faro Capo d'Orlando",
+      "description": "Single, double, triple, quadruple and quintuple rooms, sea view with balcony or window. Air conditioning, LED TV, fridge, Wi-Fi.",
+      "h1": "Rooms",
+      "lead": "All rooms have a private bathroom with toiletries and hairdryer, direct-dial telephone, LED TV, air conditioning, fridge, Wi-Fi and, on request, a travel cot.",
+      "body": "Some rooms face the sea (some with a balcony, others with a large window); the others overlook Monte Santuario, home of the Madonnina of Capo d'Orlando, the town's patron saint.",
+      "typesTitle": "Room types",
+      "types": [
+        { "name": "Single", "guests": "1 guest", "text": "With balcony." },
+        { "name": "Double / Twin", "guests": "2 guests", "text": "With balcony, or with a sea-view window." },
+        { "name": "Triple", "guests": "3 guests", "text": "With balcony or sea view." },
+        { "name": "Quadruple", "guests": "4 guests", "text": "With balcony or sea view." },
+        { "name": "Quintuple", "guests": "5 guests", "text": "Ideal for larger families." }
+      ],
+      "amenitiesTitle": "In every room",
+      "amenities": ["Bathroom with shower", "Direct-dial telephone", "Air conditioning / heating", "Sea-view balcony (sea-view rooms)", "LED TV", "Fridge", "Wi-Fi", "Hairdryer and toiletries", "Travel cot (on request)", "Free beach umbrellas (on request)"],
+      "infoTitle": "Good to know",
+      "info": ["Check-in from 2:00 pm, check-out by 10:00 am.", "Children aged 0–3 stay free in their parents' bed; ask us for cot and extra-bed rates.", "Rates vary by season: contact us for a quote for your dates."]
+    },
+    "territorio": {
+      "title": "The Area – What to see in Capo d'Orlando",
+      "description": "Capo d'Orlando and surroundings: the lighthouse, the Sanctuary, Villa Piccolo, Castello Bastione, the Roman baths of Bagnoli, the Nebrodi Park and the Aeolian Islands.",
+      "h1": "The area",
+      "lead": "Capo d'Orlando is the main tourist and shopping town of the Nebrodi area, on the north-eastern coast of Sicily, 100 km from Messina.",
+      "body": [
+        "It boasts 5 km of lovely coastline, from the promenade to San Gregorio, an old fishing village and the most striking stretch, with rocks shaped by the sea over thousands of years.",
+        "The town is framed by green hills dotted with historic villages such as Naso and San Marco d'Alunzio, and is about an hour from Cefalù, Santo Stefano di Camastra, Milazzo and Taormina. On the horizon: the Aeolian Islands, the “seven sisters”.",
+        "Visiting Capo d'Orlando means living the sea in every way: swimming, sunbathing, long beach walks, fishing, reading on the rocks in the summer breeze and beach parties."
+      ],
+      "excursionsTitle": "Recommended excursions",
+      "excursions": ["Aeolian Islands, departing from Capo d'Orlando or Milazzo", "Mount Etna, including 4x4 tours", "Nearby historic villages, rich in art and tradition", "ParcoMuseo Jalari (culture, ethnography, nature)", "Nebrodi Park"],
+      "placesTitle": "Places to see",
+      "places": [
+        { "id": "faro", "name": "The Lighthouse", "text": "Together with the Madonna's mount, the town's symbol and a landmark for fishermen. Designed by the Genio Civile and lit in 1904, it has a square pink tower and shows a white light in groups of two every 12 seconds. It is just a few metres from the hotel." },
+        { "id": "castello-santuario", "name": "The Castle and the Sanctuary", "text": "Legend says it was founded by Charlemagne in honour of the paladin Orlando. In the 16th century the tower watched for corsairs; the castle ruins were restored in 1994." },
+        { "id": "madonna", "name": "The Madonna of the Sanctuary", "text": "On 22 October 1598 a pilgrim, believed to be Saint Cono, left a small statue of the Madonna with the castle guards. Since 1600 a solemn feast with a market and fair has been held every 22 October." },
+        { "id": "villa-piccolo", "name": "Villa Piccolo Museum Foundation", "text": "Home of the Piccolo siblings, where Giuseppe Tomasi di Lampedusa wrote much of The Leopard. It holds paintings, photographs, watercolours, ceramics and the poet Lucio Piccolo's famous dog cemetery." },
+        { "id": "castello-bastione", "name": "Castello Bastione", "text": "The “sugar-mill tower”, probably built in the 14th century to protect sugar-cane plantations from pirate raids, now owned by the town." },
+        { "id": "terme-bagnoli", "name": "Roman Baths of Bagnoli", "text": "3 km from the centre, the remains of a Roman bath complex with frigidarium, tepidarium, calidarium and mosaic floors." },
+        { "id": "cave-mercadante", "name": "Mercadante Quarries", "text": "At San Gregorio, at low tide, large sandstone discs carved into the rock emerge; their purpose is still unknown." },
+        { "id": "fontana-drago", "name": "Dragon Fountain", "text": "On the SS113 at Santa Lucia, a sandstone fountain decorated with majolica tiles from the Naso school, probably from the late 17th to early 19th century." },
+        { "id": "nebrodi", "name": "Nebrodi Park", "text": "Sicily's largest protected natural area: Mangalaviti Wood, Lake Biviere, Rocche del Crasto, the Springs Trail and the Catafurco Waterfall." }
+      ]
+    },
+    "dove-siamo": {
+      "title": "Getting here – Nuovo Hotel Faro Capo d'Orlando",
+      "description": "Via Libertà 7, Capo d'Orlando (ME), Sicily. How to get here by train, car, plane, bus and ferry.",
+      "h1": "Getting here",
+      "lead": "Via Libertà 7 – 98071 Capo d'Orlando (ME), Sicily, on the seafront below the lighthouse.",
+      "howTitle": "How to reach us",
+      "how": [
+        { "mode": "By train", "text": "Capo d'Orlando railway station, 900 metres from the hotel." },
+        { "mode": "By car", "text": "A20 Messina–Palermo motorway: exit Brolo or Rocca di Caprileone, then SS113 towards Capo d'Orlando." },
+        { "mode": "By plane", "text": "Reggio Calabria airport (about 120 km), Catania (about 180 km), Palermo (about 180 km)." },
+        { "mode": "By bus", "text": "Daily connections from Messina and Catania, with links to the airports." },
+        { "mode": "By ferry", "text": "Ports of Palermo, Messina and Milazzo." }
+      ],
+      "mapTitle": "Map",
+      "mapNotice": "The map is provided by Google, which may set its own cookies.",
+      "mapLoad": "Load map",
+      "mapOpen": "Open in Google Maps"
+    },
+    "contatti": {
+      "title": "Contact & booking – Nuovo Hotel Faro",
+      "description": "Contact Nuovo Hotel Faro in Capo d'Orlando: phone +39 0941 902466, email info@nuovohotelfaro.com or the availability request form.",
+      "h1": "Contact & booking",
+      "lead": "For availability and quotes, use the form or contact us directly: we will be happy to offer you our best rate.",
+      "form": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "arrival": "Arrival",
+        "departure": "Departure",
+        "guests": "Guests",
+        "message": "Message",
+        "consent": "I have read the <a href=\"/en/privacy\">Privacy Policy</a> and agree to the processing of my data to reply to my request.",
+        "submit": "Send request",
+        "sending": "Sending…",
+        "ok": "Thank you! We have received your request and will reply as soon as possible.",
+        "error": "Sending failed. Please try again or email info@nuovohotelfaro.com.",
+        "required": "Required field"
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy – Nuovo Hotel Faro",
+      "description": "Information on the processing of personal data under EU Regulation 2016/679 (GDPR).",
+      "h1": "Privacy Policy"
+    },
+    "cookie": {
+      "title": "Cookie Policy – Nuovo Hotel Faro",
+      "description": "Information about the cookies used by nuovohotelfaro.com and how to manage your preferences.",
+      "h1": "Cookie Policy"
+    },
+    "notFound": {
+      "title": "Page not found – Nuovo Hotel Faro",
+      "description": "The requested page does not exist.",
+      "h1": "Page not found",
+      "text": "The page you are looking for does not exist or has been moved.",
+      "back": "Back to home"
+    }
+  },
+  "consent": {
+    "title": "This website uses cookies",
+    "text": "We use technical cookies needed for the site to work and, only with your consent, statistics cookies (Google Analytics) and external content (Google Maps).",
+    "accept": "Accept all",
+    "reject": "Reject",
+    "customize": "Customise",
+    "save": "Save preferences",
+    "necessary": "Necessary (always on)",
+    "analytics": "Statistics – Google Analytics",
+    "external": "External content – Google Maps",
+    "policy": "Cookie Policy"
+  }
+}

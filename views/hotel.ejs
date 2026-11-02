@@ -1,0 +1,49 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main id="main">
+  <section class="page-hero">
+    <%- include('partials/img', { name: 'terrazza-vista-mare', alt: lang === 'it' ? "Terrazza dell'hotel con vista sul mare" : 'Hotel terrace overlooking the sea', sizes: '100vw', eager: true, cls: 'hero-img' }) %>
+    <div class="hero-overlay"></div>
+    <div class="wrap"><h1><%= page.h1 %></h1></div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <p class="lead"><%- page.lead %></p>
+      <% page.body.forEach(function(p){ %><p><%= p %></p><% }) %>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="wrap split">
+      <div>
+        <h2><%= page.servicesTitle %></h2>
+        <ul class="checklist">
+          <% page.services.forEach(function(s){ %><li><%= s %></li><% }) %>
+        </ul>
+        <p><em><%= page.extra %></em></p>
+      </div>
+      <figure class="photo">
+        <%- include('partials/img', { name: 'terrazza-colazione', alt: lang === 'it' ? 'Sala colazioni esterna sotto gli ombrelloni' : 'Outdoor breakfast area under the umbrellas' }) %>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2><%= page.galleryTitle %></h2>
+      <div class="gallery">
+        <% [
+          ['faro-capo-dorlando', lang === 'it' ? "Il Faro di Capo d'Orlando" : "Capo d'Orlando lighthouse"],
+          ['colazione-vista-mare', lang === 'it' ? 'Colazione con vista mare' : 'Breakfast with a sea view'],
+          ['terrazza-colazione', lang === 'it' ? 'Sala colazioni esterna' : 'Outdoor breakfast room'],
+          ['terrazza-vista-mare', lang === 'it' ? 'Terrazza vista mare' : 'Sea-view terrace'],
+          ['aperifaro-tramonto', lang === 'it' ? 'Apericena al tramonto' : 'Sunset aperitif']
+        ].forEach(function(g){ %>
+        <figure><%- include('partials/img', { name: g[0], alt: g[1], sizes: '(max-width: 800px) 100vw, 33vw' }) %><figcaption><%= g[1] %></figcaption></figure>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>
