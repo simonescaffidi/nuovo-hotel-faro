@@ -9,6 +9,8 @@ const { alert, esc } = require('./alert');
 
 const HOTEL = {
   name: 'Nuovo Hotel Faro',
+  company: 'Amaro dei Nebrodi S.r.l.',
+  vat: '00503360836',
   street: 'Via Libertà, 7',
   zip: '98071',
   city: "Capo d'Orlando",

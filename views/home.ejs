@@ -28,6 +28,19 @@
     </div>
   </section>
 
+  <section class="section pt0">
+    <div class="wrap">
+      <h2><%= page.roomsTitle %></h2>
+      <p><%= page.roomsText %></p>
+      <div class="rooms-strip">
+        <%- include('partials/img', { name: 'camera-matrimoniale', alt: t.pages.camere.types[1].alt, sizes: '(max-width: 800px) 50vw, 33vw' }) %>
+        <%- include('partials/img', { name: 'camera-tripla', alt: t.pages.camere.types[2].alt, sizes: '(max-width: 800px) 50vw, 33vw' }) %>
+        <%- include('partials/img', { name: 'bagno-doccia', alt: t.pages.camere.gallery[3][1], sizes: '33vw' }) %>
+      </div>
+      <p><a class="arrow" href="<%= routes.camere[lang] %>"><%= page.roomsCta %></a></p>
+    </div>
+  </section>
+
   <section class="section section-tint">
     <div class="wrap">
       <ul class="highlights">

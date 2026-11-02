@@ -54,9 +54,10 @@ p { margin: 0 0 1em; }
 .site-header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,.06); border-color: var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: var(--header-h); gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--navy); }
-.brand-mark { width: 30px; height: 36px; color: var(--navy); }
-.brand-mark .beam { fill: var(--sun); opacity: .85; }
-.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-logo { height: 54px; width: auto; }
+.site-header.scrolled .brand-logo { height: 46px; }
+.brand-logo { transition: height .2s; }
+.brand-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .brand-small { font: 600 .72rem/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
 .brand-big { font: 700 1.65rem/1 var(--serif); letter-spacing: .02em; }
 .brand-stars { color: var(--sun); font-size: .8rem; align-self: flex-start; margin-top: .2rem; }
@@ -219,3 +220,14 @@ input:focus, textarea:focus { border-color: var(--sea); outline: none; box-shado
 @media (max-width: 560px) { .consent-actions .btn { flex: 1 1 45%; } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
+
+.footer-logo { height: 64px; width: auto; margin-bottom: .8rem; opacity: .95; }
+.room-photo { margin: -1.5rem -1.5rem 1rem; border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; }
+.room-photo img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.room { overflow: hidden; }
+.gallery-plain figure:first-child { grid-column: auto; grid-row: auto; }
+.gallery-plain figure:first-child img { aspect-ratio: 4/3; height: auto; }
+.rooms-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+.rooms-strip img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); }
+@media (max-width: 800px) { .rooms-strip { grid-template-columns: 1fr 1fr; } .rooms-strip img:nth-child(3) { display: none; } }
+.hero-img.hero-center { object-position: center 55%; }

@@ -9,5 +9,6 @@ Regole del progetto (seguire anche le skill `stack-standard` e `sito-web-standar
 - Niente font o librerie da CDN sulle pagine pubbliche.
 - Email solo via API Brevo (`src/mailer.js`), mai SMTP. Alert errori: `src/alert.js` → info@simonescaffidi.it.
 - Prezzi/tariffe: non pubblicati (quelli del vecchio sito erano del 2019). Aggiungerli solo con listino aggiornato dall'hotel.
-- Foto: in `public/img` (webp 800/1600). Originali in Drive, cartella "Hotel Faro/Foto 2018".
+- Foto: in `public/img` (webp 800/1600). Originali in Drive, cartella "Hotel Faro/Foto 2018" (camere: sottocartella "signorinofoto", BK3A35xx). Logo: "Hotel Faro/HF_2018_140X43-01.png" → `public/img/logo-hotel-faro.*`.
+- Gestore: Amaro dei Nebrodi S.r.l., P.IVA 00503360836 (dal footer del vecchio sito).
 - Fonte dei testi: dump `hotelfaro.sql` (luglio 2021) in Drive "Hotel Faro/Hotelfaro 2021". Non importare dati clienti/prenotazioni presenti nel dump.

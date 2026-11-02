@@ -20,9 +20,11 @@
 <meta name="theme-color" content="#0f3b57">
 <% if (GSC_VERIFICATION) { %><meta name="google-site-verification" content="<%= GSC_VERIFICATION %>"><% } %>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css?v=1">
 <script type="application/ld+json"><%- JSON.stringify({
-  '@context': 'https://schema.org', '@type': 'Hotel', name: HOTEL.name, url: PUBLIC_URL + '/',
+  '@context': 'https://schema.org', '@type': 'Hotel', name: HOTEL.name, url: PUBLIC_URL + '/', logo: PUBLIC_URL + '/img/logo-hotel-faro.png',
+  parentOrganization: { '@type': 'Organization', legalName: HOTEL.company, vatID: 'IT' + HOTEL.vat },
   image: PUBLIC_URL + '/img/og-image.jpg', telephone: HOTEL.phone, email: HOTEL.email,
   starRating: { '@type': 'Rating', ratingValue: '2' }, numberOfRooms: 27, petsAllowed: true,
   checkinTime: '14:00', checkoutTime: '10:00',

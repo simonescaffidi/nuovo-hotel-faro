@@ -15,19 +15,53 @@
     "address": "Indirizzo",
     "phone": "Telefono",
     "email": "Email",
-    "stars": "Hotel 2 stelle · 27 camere · 43 posti letto"
+    "stars": "Hotel 2 stelle · 27 camere · 43 posti letto",
+    "company": "Amaro dei Nebrodi S.r.l. – P.IVA 00503360836",
+    "companyVat": "P.IVA"
   },
   "nav": [
-    { "key": "home", "label": "Home", "path": "/" },
-    { "key": "hotel", "label": "L'Hotel", "path": "/hotel" },
-    { "key": "camere", "label": "Camere", "path": "/camere" },
-    { "key": "territorio", "label": "Territorio", "path": "/territorio" },
-    { "key": "dove-siamo", "label": "Dove siamo", "path": "/dove-siamo" },
-    { "key": "contatti", "label": "Contatti", "path": "/contatti" }
+    {
+      "key": "home",
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "key": "hotel",
+      "label": "L'Hotel",
+      "path": "/hotel"
+    },
+    {
+      "key": "camere",
+      "label": "Camere",
+      "path": "/camere"
+    },
+    {
+      "key": "territorio",
+      "label": "Territorio",
+      "path": "/territorio"
+    },
+    {
+      "key": "dove-siamo",
+      "label": "Dove siamo",
+      "path": "/dove-siamo"
+    },
+    {
+      "key": "contatti",
+      "label": "Contatti",
+      "path": "/contatti"
+    }
   ],
   "legalNav": [
-    { "key": "privacy", "label": "Privacy Policy", "path": "/privacy" },
-    { "key": "cookie", "label": "Cookie Policy", "path": "/cookie" }
+    {
+      "key": "privacy",
+      "label": "Privacy Policy",
+      "path": "/privacy"
+    },
+    {
+      "key": "cookie",
+      "label": "Cookie Policy",
+      "path": "/cookie"
+    }
   ],
   "pages": {
     "home": {
@@ -42,10 +76,26 @@
         "Si trova a due ore di auto dagli aeroporti di <strong>Palermo</strong> e <strong>Catania</strong>, a un'ora di autostrada da <strong>Cefalù</strong> e a 900 metri dalla stazione ferroviaria."
       ],
       "highlights": [
-        { "icon": "sea", "title": "Vista mare", "text": "Parte delle camere guarda il mare, con balcone o ampia finestra; le altre il Monte Santuario." },
-        { "icon": "coffee", "title": "Colazione in terrazza", "text": "Prodotti artigianali di qualità, nella sala interna o in quella esterna fiorita sul mare." },
-        { "icon": "sun", "title": "Terrazza solarium", "text": "Apericena al tramonto con musica e una vista mozzafiato sulle Eolie." },
-        { "icon": "paw", "title": "Pet friendly", "text": "Gli amici a quattro zampe sono i benvenuti." }
+        {
+          "icon": "sea",
+          "title": "Vista mare",
+          "text": "Parte delle camere guarda il mare, con balcone o ampia finestra; le altre il Monte Santuario."
+        },
+        {
+          "icon": "coffee",
+          "title": "Colazione in terrazza",
+          "text": "Prodotti artigianali di qualità, nella sala interna o in quella esterna fiorita sul mare."
+        },
+        {
+          "icon": "sun",
+          "title": "Terrazza solarium",
+          "text": "Apericena al tramonto con musica e una vista mozzafiato sulle Eolie."
+        },
+        {
+          "icon": "paw",
+          "title": "Pet friendly",
+          "text": "Gli amici a quattro zampe sono i benvenuti."
+        }
       ],
       "servicesTitle": "Tutto quello che serve per la tua vacanza",
       "services": [
@@ -59,7 +109,10 @@
         "Ombrelloni da spiaggia gratuiti su prenotazione"
       ],
       "ctaTitle": "Prenota direttamente con noi",
-      "ctaText": "Scrivici o chiamaci: ti proporremo la migliore tariffa per le tue date."
+      "ctaText": "Scrivici o chiamaci: ti proporremo la migliore tariffa per le tue date.",
+      "roomsTitle": "Le camere",
+      "roomsText": "Camere luminose con bagno privato, climatizzatore, TV LED, frigo e Wi-Fi; molte con vista mare.",
+      "roomsCta": "Vedi le camere"
     },
     "hotel": {
       "title": "L'Hotel – Nuovo Hotel Faro Capo d'Orlando",
@@ -72,7 +125,15 @@
         "Sulla terrazza solarium si organizzano gustosi apericena al tramonto con musica e vista sulle Isole Eolie."
       ],
       "servicesTitle": "Servizi dell'hotel",
-      "services": ["Bar", "Sala colazioni interna ed esterna", "Terrazza solarium", "Sala TV", "Garage per auto, moto e bici", "Wi-Fi gratuito", "Animali ammessi"],
+      "services": [
+        "Bar",
+        "Sala colazioni interna ed esterna",
+        "Terrazza solarium",
+        "Sala TV",
+        "Garage per auto, moto e bici",
+        "Wi-Fi gratuito",
+        "Animali ammessi"
+      ],
       "extra": "Tramite agenzia è possibile noleggiare auto, moto e barche e prenotare tour organizzati in Sicilia e alle Isole Eolie.",
       "galleryTitle": "Uno sguardo all'hotel"
     },
@@ -84,16 +145,88 @@
       "body": "Una parte delle camere si affaccia sul mare (alcune con balcone, altre con ampia finestra); le rimanenti si affacciano sul Monte Santuario, che custodisce la Madonnina di Capo d'Orlando, protettrice della cittadina.",
       "typesTitle": "Tipologie",
       "types": [
-        { "name": "Singola", "guests": "1 ospite", "text": "Con balcone." },
-        { "name": "Matrimoniale / Doppia", "guests": "2 ospiti", "text": "Con balcone, oppure con finestra vista mare." },
-        { "name": "Tripla", "guests": "3 ospiti", "text": "Con balcone oppure vista mare." },
-        { "name": "Quadrupla", "guests": "4 ospiti", "text": "Con balcone oppure vista mare." },
-        { "name": "Quintupla", "guests": "5 ospiti", "text": "Ideale per famiglie numerose." }
+        {
+          "name": "Singola",
+          "guests": "1 ospite",
+          "text": "Con balcone.",
+          "img": "camera-singola",
+          "alt": "Camera singola"
+        },
+        {
+          "name": "Matrimoniale / Doppia",
+          "guests": "2 ospiti",
+          "text": "Con balcone, oppure con finestra vista mare.",
+          "img": "camera-matrimoniale",
+          "alt": "Camera matrimoniale"
+        },
+        {
+          "name": "Tripla",
+          "guests": "3 ospiti",
+          "text": "Con balcone oppure vista mare.",
+          "img": "camera-tripla",
+          "alt": "Camera tripla"
+        },
+        {
+          "name": "Quadrupla",
+          "guests": "4 ospiti",
+          "text": "Con balcone oppure vista mare.",
+          "img": "camera-quadrupla",
+          "alt": "Camera quadrupla"
+        },
+        {
+          "name": "Quintupla",
+          "guests": "5 ospiti",
+          "text": "Ideale per famiglie numerose.",
+          "img": "camera-quintupla",
+          "alt": "Camera quintupla"
+        }
       ],
       "amenitiesTitle": "Dotazione delle camere",
-      "amenities": ["Bagno con doccia", "Telefono con chiamata diretta", "Climatizzatore / riscaldamento", "Balcone con vista mare (camere vista mare)", "TV LED", "Frigo", "Wi-Fi", "Phon e set di cortesia", "Culla da campeggio (su richiesta)", "Ombrelloni da spiaggia gratis (su prenotazione)"],
+      "amenities": [
+        "Bagno con doccia",
+        "Telefono con chiamata diretta",
+        "Climatizzatore / riscaldamento",
+        "Balcone con vista mare (camere vista mare)",
+        "TV LED",
+        "Frigo",
+        "Wi-Fi",
+        "Phon e set di cortesia",
+        "Culla da campeggio (su richiesta)",
+        "Ombrelloni da spiaggia gratis (su prenotazione)"
+      ],
       "infoTitle": "Informazioni utili",
-      "info": ["Check-in dalle 14:00, check-out entro le 10:00.", "Bambini 0–3 anni gratis nel letto dei genitori; per culla e letto aggiunto chiedi la tariffa.", "Tariffe variabili per stagione: contattaci per un preventivo sulle tue date."]
+      "info": [
+        "Check-in dalle 14:00, check-out entro le 10:00.",
+        "Bambini 0–3 anni gratis nel letto dei genitori; per culla e letto aggiunto chiedi la tariffa.",
+        "Tariffe variabili per stagione: contattaci per un preventivo sulle tue date."
+      ],
+      "galleryTitle": "Le camere in foto",
+      "gallery": [
+        [
+          "camera-doppia-balcone",
+          "Camera doppia con finestra"
+        ],
+        [
+          "camera-singola-2",
+          "Camera singola con balcone"
+        ],
+        [
+          "camera-scrivania",
+          "Camera con scrivania e frigo"
+        ],
+        [
+          "bagno-doccia",
+          "Bagno con doccia"
+        ],
+        [
+          "bagno",
+          "Bagno privato"
+        ],
+        [
+          "camera-quintupla",
+          "Camera quintupla per famiglie"
+        ]
+      ]
     },
     "territorio": {
       "title": "Territorio – Cosa vedere a Capo d'Orlando",
@@ -106,18 +239,60 @@
         "Visitare Capo d'Orlando significa vivere il mare in tutte le sue sfaccettature: nuoto, sole, lunghe passeggiate sulla spiaggia, pesca, letture sugli scogli accarezzati dalla brezza estiva e feste in spiaggia."
       ],
       "excursionsTitle": "Escursioni consigliate",
-      "excursions": ["Isole Eolie, con partenza da Capo d'Orlando o da Milazzo", "Etna, anche in fuoristrada", "Centri storici dei dintorni, ricchi di arte e tradizione", "ParcoMuseo Jalari (cultura, etnografia, ambiente)", "Parco dei Nebrodi"],
+      "excursions": [
+        "Isole Eolie, con partenza da Capo d'Orlando o da Milazzo",
+        "Etna, anche in fuoristrada",
+        "Centri storici dei dintorni, ricchi di arte e tradizione",
+        "ParcoMuseo Jalari (cultura, etnografia, ambiente)",
+        "Parco dei Nebrodi"
+      ],
       "placesTitle": "Da vedere",
       "places": [
-        { "id": "faro", "name": "Il Faro", "text": "Simbolo del paese insieme al Monte della Madonna e punto di riferimento per i pescatori. Progettato dal Genio Civile e attivato nel 1904, ha una torre a pianta quadrata color rosa e segnala con luce bianca a gruppi di due ogni 12 secondi. È a pochi metri dall'hotel." },
-        { "id": "castello-santuario", "name": "Il Castello e il Santuario", "text": "Secondo la leggenda fondato da Carlo Magno in onore del paladino Orlando. Nel Cinquecento la torre serviva da avvistamento contro i corsari; i resti del castello sono stati restaurati nel 1994." },
-        { "id": "madonna", "name": "La Madonna del Santuario", "text": "Il 22 ottobre 1598 un pellegrino, identificato con San Cono, lasciò ai guardiani del castello una piccola statua della Madonna. Dal 1600 ogni 22 ottobre si celebra una solenne festa con mercato e fiera." },
-        { "id": "villa-piccolo", "name": "Museo Fondazione Villa Piccolo", "text": "Dimora dei fratelli Piccolo, dove Giuseppe Tomasi di Lampedusa scrisse buona parte del Gattopardo. Custodisce quadri, fotografie, acquerelli, ceramiche e il celebre cimitero dei cani del poeta Lucio Piccolo." },
-        { "id": "castello-bastione", "name": "Castello Bastione", "text": "La “torre del trappeto”, costruita probabilmente nel XIV secolo per difendere le piantagioni di canna da zucchero dalle incursioni dei pirati, oggi di proprietà del Comune." },
-        { "id": "terme-bagnoli", "name": "Terme Romane di Bagnoli", "text": "A 3 km dal centro, i resti di un impianto termale romano con frigidarium, tepidarium e calidarium e pavimenti a mosaico." },
-        { "id": "cave-mercadante", "name": "Le Cave del Mercadante", "text": "A San Gregorio, con la bassa marea affiorano grandi dischi di pietra arenaria scolpiti nella roccia, i “rocchi”, di cui ancora non si conosce l'utilizzo." },
-        { "id": "fontana-drago", "name": "Fontana di Drago", "text": "Sulla SS113 in contrada Santa Lucia, fontana in arenaria decorata con maioliche della scuola di Naso, probabilmente tra fine XVII e inizio XIX secolo." },
-        { "id": "nebrodi", "name": "Parco dei Nebrodi", "text": "La più grande area naturale protetta della Sicilia: Bosco Mangalaviti, Lago Biviere, Rocche del Crasto, Sentiero delle sorgenti e la Cascata del Catafurco." }
+        {
+          "id": "faro",
+          "name": "Il Faro",
+          "text": "Simbolo del paese insieme al Monte della Madonna e punto di riferimento per i pescatori. Progettato dal Genio Civile e attivato nel 1904, ha una torre a pianta quadrata color rosa e segnala con luce bianca a gruppi di due ogni 12 secondi. È a pochi metri dall'hotel."
+        },
+        {
+          "id": "castello-santuario",
+          "name": "Il Castello e il Santuario",
+          "text": "Secondo la leggenda fondato da Carlo Magno in onore del paladino Orlando. Nel Cinquecento la torre serviva da avvistamento contro i corsari; i resti del castello sono stati restaurati nel 1994."
+        },
+        {
+          "id": "madonna",
+          "name": "La Madonna del Santuario",
+          "text": "Il 22 ottobre 1598 un pellegrino, identificato con San Cono, lasciò ai guardiani del castello una piccola statua della Madonna. Dal 1600 ogni 22 ottobre si celebra una solenne festa con mercato e fiera."
+        },
+        {
+          "id": "villa-piccolo",
+          "name": "Museo Fondazione Villa Piccolo",
+          "text": "Dimora dei fratelli Piccolo, dove Giuseppe Tomasi di Lampedusa scrisse buona parte del Gattopardo. Custodisce quadri, fotografie, acquerelli, ceramiche e il celebre cimitero dei cani del poeta Lucio Piccolo."
+        },
+        {
+          "id": "castello-bastione",
+          "name": "Castello Bastione",
+          "text": "La “torre del trappeto”, costruita probabilmente nel XIV secolo per difendere le piantagioni di canna da zucchero dalle incursioni dei pirati, oggi di proprietà del Comune."
+        },
+        {
+          "id": "terme-bagnoli",
+          "name": "Terme Romane di Bagnoli",
+          "text": "A 3 km dal centro, i resti di un impianto termale romano con frigidarium, tepidarium e calidarium e pavimenti a mosaico."
+        },
+        {
+          "id": "cave-mercadante",
+          "name": "Le Cave del Mercadante",
+          "text": "A San Gregorio, con la bassa marea affiorano grandi dischi di pietra arenaria scolpiti nella roccia, i “rocchi”, di cui ancora non si conosce l'utilizzo."
+        },
+        {
+          "id": "fontana-drago",
+          "name": "Fontana di Drago",
+          "text": "Sulla SS113 in contrada Santa Lucia, fontana in arenaria decorata con maioliche della scuola di Naso, probabilmente tra fine XVII e inizio XIX secolo."
+        },
+        {
+          "id": "nebrodi",
+          "name": "Parco dei Nebrodi",
+          "text": "La più grande area naturale protetta della Sicilia: Bosco Mangalaviti, Lago Biviere, Rocche del Crasto, Sentiero delle sorgenti e la Cascata del Catafurco."
+        }
       ]
     },
     "dove-siamo": {
@@ -127,11 +302,26 @@
       "lead": "Via Libertà 7 – 98071 Capo d'Orlando (ME), sul lungomare, sotto il Faro.",
       "howTitle": "Come raggiungerci",
       "how": [
-        { "mode": "In treno", "text": "Stazione ferroviaria di Capo d'Orlando, a 900 metri dall'hotel." },
-        { "mode": "In auto", "text": "A20 Messina–Palermo: uscita Brolo o Rocca di Caprileone, poi SS113 in direzione Capo d'Orlando." },
-        { "mode": "In aereo", "text": "Aeroporto di Reggio Calabria (circa 120 km), Catania (circa 180 km), Palermo (circa 180 km)." },
-        { "mode": "In autobus", "text": "Collegamenti giornalieri da Messina e Catania, con coincidenze per gli aeroporti." },
-        { "mode": "In nave", "text": "Porti di Palermo, Messina e Milazzo." }
+        {
+          "mode": "In treno",
+          "text": "Stazione ferroviaria di Capo d'Orlando, a 900 metri dall'hotel."
+        },
+        {
+          "mode": "In auto",
+          "text": "A20 Messina–Palermo: uscita Brolo o Rocca di Caprileone, poi SS113 in direzione Capo d'Orlando."
+        },
+        {
+          "mode": "In aereo",
+          "text": "Aeroporto di Reggio Calabria (circa 120 km), Catania (circa 180 km), Palermo (circa 180 km)."
+        },
+        {
+          "mode": "In autobus",
+          "text": "Collegamenti giornalieri da Messina e Catania, con coincidenze per gli aeroporti."
+        },
+        {
+          "mode": "In nave",
+          "text": "Porti di Palermo, Messina e Milazzo."
+        }
       ],
       "mapTitle": "Mappa",
       "mapNotice": "La mappa è fornita da Google, che può impostare cookie propri.",

@@ -38,7 +38,11 @@
           ['colazione-vista-mare', lang === 'it' ? 'Colazione con vista mare' : 'Breakfast with a sea view'],
           ['terrazza-colazione', lang === 'it' ? 'Sala colazioni esterna' : 'Outdoor breakfast room'],
           ['terrazza-vista-mare', lang === 'it' ? 'Terrazza vista mare' : 'Sea-view terrace'],
-          ['aperifaro-tramonto', lang === 'it' ? 'Apericena al tramonto' : 'Sunset aperitif']
+          ['aperifaro-tramonto', lang === 'it' ? 'Apericena al tramonto' : 'Sunset aperitif'],
+          ['camera-matrimoniale', t.pages.camere.types[1].alt],
+          ['camera-quadrupla', t.pages.camere.types[3].alt],
+          ['bagno-doccia', t.pages.camere.gallery[3][1]],
+          ['camera-singola', t.pages.camere.types[0].alt]
         ].forEach(function(g){ %>
         <figure><%- include('partials/img', { name: g[0], alt: g[1], sizes: '(max-width: 800px) 100vw, 33vw' }) %><figcaption><%= g[1] %></figcaption></figure>
         <% }) %>

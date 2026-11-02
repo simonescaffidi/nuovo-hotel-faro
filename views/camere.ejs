@@ -2,7 +2,7 @@
 <%- include('partials/header') %>
 <main id="main">
   <section class="page-hero">
-    <%- include('partials/img', { name: 'terrazza-vista-mare', alt: lang === 'it' ? 'Vista mare dalla terrazza' : 'Sea view from the terrace', sizes: '100vw', eager: true, cls: 'hero-img' }) %>
+    <%- include('partials/img', { name: 'camera-matrimoniale', alt: lang === 'it' ? 'Camera matrimoniale del Nuovo Hotel Faro' : 'Double room at Nuovo Hotel Faro', sizes: '100vw', eager: true, cls: 'hero-img hero-center' }) %>
     <div class="hero-overlay"></div>
     <div class="wrap"><h1><%= page.h1 %></h1></div>
   </section>
@@ -20,6 +20,7 @@
       <ul class="rooms">
         <% page.types.forEach(function(r, i){ %>
         <li class="room">
+          <figure class="room-photo"><%- include('partials/img', { name: r.img, alt: r.alt, sizes: '(max-width: 560px) 100vw, (max-width: 1023px) 50vw, 20vw' }) %></figure>
           <span class="room-guests" aria-hidden="true"><% for (var k=0;k<=i && k<5;k++){ %>●<% } %></span>
           <h3><%= r.name %></h3>
           <p class="room-meta"><%= r.guests %></p>
@@ -32,6 +33,17 @@
   </section>
 
   <section class="section">
+    <div class="wrap">
+      <h2><%= page.galleryTitle %></h2>
+      <div class="gallery gallery-plain">
+        <% page.gallery.forEach(function(g){ %>
+        <figure><%- include('partials/img', { name: g[0], alt: g[1], sizes: '(max-width: 800px) 50vw, 33vw' }) %><figcaption><%= g[1] %></figcaption></figure>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint">
     <div class="wrap split">
       <div>
         <h2><%= page.amenitiesTitle %></h2>
@@ -39,7 +51,7 @@
           <% page.amenities.forEach(function(s){ %><li><%= s %></li><% }) %>
         </ul>
       </div>
-      <div class="infobox">
+      <div class="infobox" style="background:#fff">
         <h2><%= page.infoTitle %></h2>
         <ul>
           <% page.info.forEach(function(s){ %><li><%= s %></li><% }) %>
