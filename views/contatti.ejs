@@ -9,31 +9,22 @@
   </section>
 
   <section class="section pt0">
-    <div class="wrap split split-form">
-      <form class="form" id="contact-form" novalidate data-ok="<%= page.form.ok %>" data-error="<%= page.form.error %>" data-sending="<%= page.form.sending %>">
-        <input type="hidden" name="lang" value="<%= lang %>">
-        <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <div class="field"><label for="f-name"><%= page.form.name %> *</label><input id="f-name" name="name" required minlength="2" maxlength="100" autocomplete="name"></div>
-        <div class="row">
-          <div class="field"><label for="f-email"><%= page.form.email %> *</label><input id="f-email" name="email" type="email" required maxlength="150" autocomplete="email"></div>
-          <div class="field"><label for="f-phone"><%= page.form.phone %></label><input id="f-phone" name="phone" type="tel" maxlength="30" autocomplete="tel"></div>
-        </div>
-        <div class="row row-3">
-          <div class="field"><label for="f-arr"><%= page.form.arrival %></label><input id="f-arr" name="arrival" type="date"></div>
-          <div class="field"><label for="f-dep"><%= page.form.departure %></label><input id="f-dep" name="departure" type="date"></div>
-          <div class="field"><label for="f-guests"><%= page.form.guests %></label><input id="f-guests" name="guests" type="number" min="1" max="20" inputmode="numeric"></div>
-        </div>
-        <div class="field"><label for="f-msg"><%= page.form.message %></label><textarea id="f-msg" name="message" rows="5" maxlength="3000"></textarea></div>
-        <div class="field check"><input id="f-consent" name="consent" type="checkbox" required><label for="f-consent"><%- page.form.consent %> *</label></div>
-        <button class="btn btn-lg" type="submit"><%= page.form.submit %></button>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-
+    <div class="wrap contact-grid">
+      <div class="contact-box">
+        <h2><%= page.emailTitle %></h2>
+        <p><%= page.emailText %></p>
+        <p class="contact-big"><a href="mailto:<%= HOTEL.email %>"><%= HOTEL.email %></a></p>
+        <a class="btn btn-lg" href="mailto:<%= HOTEL.email %>?subject=<%= encodeURIComponent(page.mailSubject) %>&body=<%= encodeURIComponent(page.mailBody) %>"><%= page.emailBtn %></a>
+      </div>
+      <div class="contact-box">
+        <h2><%= page.phoneTitle %></h2>
+        <p><%= t.ui.phone %></p>
+        <p class="contact-big"><a href="tel:<%= HOTEL.phoneHref %>"><%= HOTEL.phone %></a></p>
+        <a class="btn btn-lg btn-ghost" href="tel:<%= HOTEL.phoneHref %>"><%= page.phoneBtn %></a>
+      </div>
       <aside class="contact-card">
         <h2>Nuovo Hotel Faro</h2>
         <p><strong><%= t.ui.address %></strong><br><%= HOTEL.street %><br><%= HOTEL.zip %> <%= HOTEL.city %> (<%= HOTEL.province %>)</p>
-        <p><strong><%= t.ui.phone %></strong><br><a href="tel:<%= HOTEL.phoneHref %>"><%= HOTEL.phone %></a></p>
-        <p><strong><%= t.ui.email %></strong><br><a href="mailto:<%= HOTEL.email %>"><%= HOTEL.email %></a></p>
         <p><a href="<%= HOTEL.facebook %>" target="_blank" rel="noopener"><%= t.ui.followUs %></a></p>
         <p><a class="arrow" href="<%= routes['dove-siamo'][lang] %>"><%= t.nav[4].label %></a></p>
       </aside>

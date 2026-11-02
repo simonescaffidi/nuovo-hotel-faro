@@ -330,24 +330,16 @@
     },
     "contatti": {
       "title": "Contact & booking – Nuovo Hotel Faro",
-      "description": "Contact Nuovo Hotel Faro in Capo d'Orlando: phone +39 0941 902466, email info@nuovohotelfaro.com or the availability request form.",
+      "description": "Contact Nuovo Hotel Faro in Capo d'Orlando: email info@nuovohotelfaro.com, phone +39 0941 902466.",
       "h1": "Contact & booking",
-      "lead": "For availability and quotes, use the form or contact us directly: we will be happy to offer you our best rate.",
-      "form": {
-        "name": "Full name",
-        "email": "Email",
-        "phone": "Phone (optional)",
-        "arrival": "Arrival",
-        "departure": "Departure",
-        "guests": "Guests",
-        "message": "Message",
-        "consent": "I have read the <a href=\"/en/privacy\">Privacy Policy</a> and agree to the processing of my data to reply to my request.",
-        "submit": "Send request",
-        "sending": "Sending…",
-        "ok": "Thank you! We have received your request and will reply as soon as possible.",
-        "error": "Sending failed. Please try again or email info@nuovohotelfaro.com.",
-        "required": "Required field"
-      }
+      "lead": "For availability and quotes, email or call us: we will be happy to offer you our best rate.",
+      "emailTitle": "Write to us",
+      "emailText": "Tell us your arrival and departure dates and number of guests: we will reply as soon as possible.",
+      "emailBtn": "Send an email",
+      "phoneTitle": "Call us",
+      "phoneBtn": "Call now",
+      "mailSubject": "Availability request",
+      "mailBody": "Hello,\nI would like to check availability for:\n- Arrival: \n- Departure: \n- Guests: \n\nThank you"
     },
     "privacy": {
       "title": "Privacy Policy – Nuovo Hotel Faro",

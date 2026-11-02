@@ -40,33 +40,4 @@
     document.addEventListener('consent:change', function (e) { if (e.detail.external) loadMap(); });
   }
 
-  // Modulo contatti
-  var form = document.getElementById('contact-form');
-  if (form) {
-    var status = form.querySelector('.form-status');
-    var arr = form.querySelector('[name="arrival"]');
-    var dep = form.querySelector('[name="departure"]');
-    var today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-    if (arr) arr.min = today;
-    if (arr && dep) arr.addEventListener('change', function () { dep.min = arr.value || today; });
-    if (dep) dep.min = today;
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var btn = form.querySelector('button[type="submit"]');
-      var data = {};
-      new FormData(form).forEach(function (v, k) { data[k] = v; });
-      data.consent = form.querySelector('[name="consent"]').checked;
-      btn.disabled = true; status.className = 'form-status'; status.textContent = form.getAttribute('data-sending');
-      fetch('/api/contatti', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
-        .then(function (r) {
-          if (r.ok) { status.className = 'form-status ok'; status.textContent = form.getAttribute('data-ok'); form.reset(); if (window.gtag) window.gtag('event', 'generate_lead'); }
-          else { status.className = 'form-status err'; status.textContent = form.getAttribute('data-error'); }
-        })
-        .catch(function () { status.className = 'form-status err'; status.textContent = form.getAttribute('data-error'); })
-        .finally(function () { btn.disabled = false; });
-    });
-  }
 })();

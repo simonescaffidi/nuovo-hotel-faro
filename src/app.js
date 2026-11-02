@@ -1,11 +1,8 @@
 const path = require('path');
 const express = require('express');
 const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
-const { z } = require('zod');
 const { LOCALES, ROUTES } = require('./i18n');
-const { invia } = require('./mailer');
-const { alert, esc } = require('./alert');
+const { alert } = require('./alert');
 
 const HOTEL = {
   name: 'Nuovo Hotel Faro',
@@ -30,6 +27,7 @@ function createApp() {
   const PUBLIC_URL = (process.env.PUBLIC_URL || 'https://www.nuovohotelfaro.com').replace(/\/$/, '');
   const GA4_ID = process.env.GA4_ID || '';
   const GSC_VERIFICATION = process.env.GSC_VERIFICATION || '';
+  const ASSET_V = (process.env.RAILWAY_GIT_COMMIT_SHA || String(Date.now())).slice(0, 8);
 
   app.set('trust proxy', 1);
   app.set('view engine', 'ejs');
@@ -54,14 +52,13 @@ function createApp() {
   }));
 
   app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: '7d', index: false }));
-  app.use(express.json({ limit: '20kb' }));
 
   function render(res, lang, key, view, extra = {}) {
     const t = LOCALES[lang];
     const page = t.pages[key];
     const alt = lang === 'it' ? 'en' : 'it';
     res.render(view, {
-      t, lang, key, page, HOTEL, PUBLIC_URL, GA4_ID, GSC_VERIFICATION,
+      t, lang, key, page, HOTEL, PUBLIC_URL, GA4_ID, GSC_VERIFICATION, ASSET_V,
       path: ROUTES[key] ? ROUTES[key][lang] : null,
       altPath: ROUTES[key] ? ROUTES[key][alt] : (alt === 'en' ? '/en/' : '/'),
       routes: ROUTES,
@@ -91,53 +88,11 @@ function createApp() {
 
   // SEO
   app.get('/robots.txt', (req, res) => {
-    res.type('text/plain').send(`User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${PUBLIC_URL}/sitemap.xml\n`);
+    res.type('text/plain').send(`User-agent: *\nAllow: /\n\nSitemap: ${PUBLIC_URL}/sitemap.xml\n`);
   });
   app.get('/sitemap.xml', (req, res) => {
     const urls = Object.values(ROUTES).map((p) => `  <url>\n    <loc>${PUBLIC_URL}${p.it}</loc>\n    <xhtml:link rel="alternate" hreflang="it" href="${PUBLIC_URL}${p.it}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${PUBLIC_URL}${p.en}"/>\n  </url>\n  <url>\n    <loc>${PUBLIC_URL}${p.en}</loc>\n    <xhtml:link rel="alternate" hreflang="it" href="${PUBLIC_URL}${p.it}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${PUBLIC_URL}${p.en}"/>\n  </url>`).join('\n');
     res.type('application/xml').send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`);
-  });
-
-  // Modulo richiesta disponibilità
-  const formLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 5, standardHeaders: 'draft-7', legacyHeaders: false });
-  const schema = z.object({
-    name: z.string().trim().min(2).max(100),
-    email: z.string().trim().email().max(150),
-    phone: z.string().trim().max(30).optional().default(''),
-    arrival: z.string().trim().max(20).optional().default(''),
-    departure: z.string().trim().max(20).optional().default(''),
-    guests: z.string().trim().max(10).optional().default(''),
-    message: z.string().trim().max(3000).optional().default(''),
-    consent: z.literal(true),
-    lang: z.enum(['it', 'en']).optional().default('it'),
-    website: z.string().max(0).optional().default(''), // honeypot
-  });
-
-  app.post('/api/contatti', formLimiter, async (req, res) => {
-    const parsed = schema.safeParse(req.body || {});
-    if (!parsed.success) return res.status(400).json({ ok: false });
-    const d = parsed.data;
-    const righe = [
-      ['Nome', d.name], ['Email', d.email], ['Telefono', d.phone], ['Arrivo', d.arrival], ['Partenza', d.departure],
-      ['Ospiti', d.guests], ['Lingua', d.lang], ['Messaggio', d.message],
-    ];
-    const text = righe.map(([k, v]) => `${k}: ${v}`).join('\n');
-    const html = `<h2>Nuova richiesta dal sito</h2><table cellpadding="6">${righe.map(([k, v]) => `<tr><td><b>${k}</b></td><td>${esc(v).replace(/\n/g, '<br>')}</td></tr>`).join('')}</table>`;
-    try {
-      const r = await invia({
-        to: process.env.CONTACT_EMAIL || HOTEL.email,
-        subject: `Richiesta disponibilità – ${d.name}${d.arrival ? ` (${d.arrival})` : ''}`,
-        text, html, replyTo: d.email,
-      });
-      if (!r.inviata) {
-        alert('modulo-contatti', `Invio richiesta fallito: ${r.motivo}\n\n${text}`);
-        return res.status(502).json({ ok: false });
-      }
-      return res.json({ ok: true });
-    } catch (e) {
-      alert('modulo-contatti', `Eccezione invio: ${e.message}\n\n${text}`);
-      return res.status(502).json({ ok: false });
-    }
   });
 
   // Test alert (protetto da token)

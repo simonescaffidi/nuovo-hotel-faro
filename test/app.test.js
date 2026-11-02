@@ -40,9 +40,8 @@ test('sitemap e robots', async () => {
   assert.match(await (await fetch(`${base}/robots.txt`)).text(), /Sitemap:/);
 });
 
-test('form: validazione e honeypot', async () => {
-  const bad = await fetch(`${base}/api/contatti`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: 'A', email: 'x' }) });
-  assert.equal(bad.status, 400);
-  const bot = await fetch(`${base}/api/contatti`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: 'Mario Rossi', email: 'm@r.it', consent: true, website: 'spam' }) });
-  assert.equal(bot.status, 400);
+test('contatti: niente modulo, email presente', async () => {
+  const html = await (await fetch(`${base}/contatti`)).text();
+  assert.doesNotMatch(html, /<form/);
+  assert.match(html, /mailto:info@nuovohotelfaro\.com/);
 });

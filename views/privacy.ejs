@@ -5,19 +5,19 @@
     <div class="wrap narrow legal">
       <h1><%= page.h1 %></h1>
       <% if (lang === 'it') { %>
-      <p>Informativa ai sensi degli artt. 13–14 del Regolamento (UE) 2016/679 (GDPR) per chi visita il sito <%= PUBLIC_URL.replace('https://','') %> e invia richieste tramite il modulo di contatto.</p>
+      <p>Informativa ai sensi degli artt. 13–14 del Regolamento (UE) 2016/679 (GDPR) per chi visita il sito <%= PUBLIC_URL.replace('https://','') %> e ci contatta via email o telefono.</p>
       <h2>Titolare del trattamento</h2>
       <p><%= HOTEL.company %> (P.IVA <%= HOTEL.vat %>), che gestisce il Nuovo Hotel Faro – <%= HOTEL.street %>, <%= HOTEL.zip %> <%= HOTEL.city %> (<%= HOTEL.province %>). Email: <a href="mailto:<%= HOTEL.email %>"><%= HOTEL.email %></a> – Tel. <%= HOTEL.phone %>.</p>
       <h2>Dati trattati e finalità</h2>
       <ul>
-        <li><strong>Richieste di disponibilità e contatto</strong>: nome, email, telefono (facoltativo), date di soggiorno, numero di ospiti e messaggio, usati solo per rispondere alla richiesta e, se lo desideri, per la prenotazione. Base giuridica: misure precontrattuali su richiesta dell'interessato (art. 6.1.b GDPR).</li>
+        <li><strong>Richieste di disponibilità e contatto</strong>: i dati che ci invii via email o comunichi per telefono (nome, recapiti, date di soggiorno, numero di ospiti), usati solo per rispondere alla richiesta e, se lo desideri, per la prenotazione. Base giuridica: misure precontrattuali su richiesta dell'interessato (art. 6.1.b GDPR).</li>
         <li><strong>Dati di navigazione</strong>: dati tecnici (indirizzo IP, log del server) necessari al funzionamento e alla sicurezza del sito. Base giuridica: legittimo interesse (art. 6.1.f).</li>
         <li><strong>Statistiche</strong>: solo con il tuo consenso, Google Analytics 4 raccoglie dati aggregati di utilizzo. Base giuridica: consenso (art. 6.1.a), revocabile in qualsiasi momento da “Gestisci cookie”.</li>
       </ul>
       <h2>Modalità e conservazione</h2>
       <p>I dati sono trattati con strumenti elettronici e misure di sicurezza adeguate. Le richieste di contatto sono conservate per il tempo necessario a gestirle e comunque non oltre 24 mesi, salvo obblighi di legge connessi a un soggiorno.</p>
       <h2>Destinatari</h2>
-      <p>I dati possono essere trattati da fornitori che agiscono come responsabili del trattamento: hosting del sito (Railway), servizio di invio email (Brevo – Sendinblue SAS, UE) e, con consenso, Google Ireland Ltd per le statistiche. I dati non sono diffusi né venduti.</p>
+      <p>I dati possono essere trattati da fornitori che agiscono come responsabili del trattamento: hosting del sito (Railway), fornitore della casella email dell'hotel e, con consenso, Google Ireland Ltd per le statistiche. I dati non sono diffusi né venduti.</p>
       <h2>Trasferimenti extra UE</h2>
       <p>Alcuni fornitori possono trattare dati fuori dall'UE; in tal caso il trasferimento avviene sulla base di decisioni di adeguatezza (es. EU-US Data Privacy Framework) o clausole contrattuali standard.</p>
       <h2>I tuoi diritti</h2>
@@ -26,19 +26,19 @@
       <p>Per i cookie consulta la <a href="<%= routes.cookie[lang] %>">Cookie Policy</a>.</p>
       <p><em>Ultimo aggiornamento: 2 novembre 2026.</em></p>
       <% } else { %>
-      <p>Information pursuant to Articles 13–14 of Regulation (EU) 2016/679 (GDPR) for visitors to <%= PUBLIC_URL.replace('https://','') %> and users of the contact form.</p>
+      <p>Information pursuant to Articles 13–14 of Regulation (EU) 2016/679 (GDPR) for visitors to <%= PUBLIC_URL.replace('https://','') %> and anyone who contacts us by email or phone.</p>
       <h2>Data controller</h2>
       <p><%= HOTEL.company %> (VAT no. IT<%= HOTEL.vat %>), operator of Nuovo Hotel Faro – <%= HOTEL.street %>, <%= HOTEL.zip %> <%= HOTEL.city %> (<%= HOTEL.province %>), Italy. Email: <a href="mailto:<%= HOTEL.email %>"><%= HOTEL.email %></a> – Tel. <%= HOTEL.phone %>.</p>
       <h2>Data processed and purposes</h2>
       <ul>
-        <li><strong>Availability and contact requests</strong>: name, email, phone (optional), stay dates, number of guests and message, used only to reply to your request and, if you wish, to handle your booking. Legal basis: pre-contractual measures at your request (Art. 6.1.b GDPR).</li>
+        <li><strong>Availability and contact requests</strong>: the data you send us by email or give us by phone (name, contact details, stay dates, number of guests), used only to reply to your request and, if you wish, to handle your booking. Legal basis: pre-contractual measures at your request (Art. 6.1.b GDPR).</li>
         <li><strong>Browsing data</strong>: technical data (IP address, server logs) needed for the site to work securely. Legal basis: legitimate interest (Art. 6.1.f).</li>
         <li><strong>Statistics</strong>: only with your consent, Google Analytics 4 collects aggregated usage data. Legal basis: consent (Art. 6.1.a), which you can withdraw at any time via “Manage cookies”.</li>
       </ul>
       <h2>Methods and retention</h2>
       <p>Data are processed electronically with appropriate security measures. Contact requests are kept for as long as needed to handle them and no longer than 24 months, unless the law requires otherwise in connection with a stay.</p>
       <h2>Recipients</h2>
-      <p>Data may be processed by providers acting as processors: website hosting (Railway), email delivery (Brevo – Sendinblue SAS, EU) and, with consent, Google Ireland Ltd for statistics. Data are never disclosed publicly or sold.</p>
+      <p>Data may be processed by providers acting as processors: website hosting (Railway), the hotel's email provider and, with consent, Google Ireland Ltd for statistics. Data are never disclosed publicly or sold.</p>
       <h2>Transfers outside the EU</h2>
       <p>Some providers may process data outside the EU; such transfers rely on adequacy decisions (e.g. EU-US Data Privacy Framework) or standard contractual clauses.</p>
       <h2>Your rights</h2>

@@ -330,24 +330,16 @@
     },
     "contatti": {
       "title": "Contatti e prenotazioni – Nuovo Hotel Faro",
-      "description": "Contatta il Nuovo Hotel Faro di Capo d'Orlando: telefono 0941 902466, email info@nuovohotelfaro.com o modulo di richiesta disponibilità.",
+      "description": "Contatta il Nuovo Hotel Faro di Capo d'Orlando: email info@nuovohotelfaro.com, telefono 0941 902466.",
       "h1": "Contatti e prenotazioni",
-      "lead": "Per disponibilità e preventivi scrivici dal modulo o contattaci direttamente: saremo lieti di proporti la nostra migliore offerta.",
-      "form": {
-        "name": "Nome e cognome",
-        "email": "Email",
-        "phone": "Telefono (facoltativo)",
-        "arrival": "Arrivo",
-        "departure": "Partenza",
-        "guests": "Ospiti",
-        "message": "Messaggio",
-        "consent": "Ho letto la <a href=\"/privacy\">Privacy Policy</a> e acconsento al trattamento dei dati per rispondere alla mia richiesta.",
-        "submit": "Invia richiesta",
-        "sending": "Invio in corso…",
-        "ok": "Grazie! Abbiamo ricevuto la tua richiesta e ti risponderemo al più presto.",
-        "error": "Invio non riuscito. Riprova o scrivici a info@nuovohotelfaro.com.",
-        "required": "Campo obbligatorio"
-      }
+      "lead": "Per disponibilità e preventivi scrivici una email o chiamaci: saremo lieti di proporti la nostra migliore offerta.",
+      "emailTitle": "Scrivici",
+      "emailText": "Indica date di arrivo e partenza e numero di ospiti: ti risponderemo al più presto.",
+      "emailBtn": "Invia una email",
+      "phoneTitle": "Chiamaci",
+      "phoneBtn": "Chiama ora",
+      "mailSubject": "Richiesta disponibilità",
+      "mailBody": "Buongiorno,\nvorrei sapere la disponibilità per:\n- Arrivo: \n- Partenza: \n- Ospiti: \n\nGrazie"
     },
     "privacy": {
       "title": "Privacy Policy – Nuovo Hotel Faro",

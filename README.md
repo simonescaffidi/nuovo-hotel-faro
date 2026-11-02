@@ -21,10 +21,10 @@ I vecchi URL WordPress (`/tariffe-2/`, `/il-faro/`, `/booking/`…) fanno redire
 
 ## Funzioni
 - Testi in `locales/it.json` e `locales/en.json`
-- Modulo "Richiedi disponibilità" → `POST /api/contatti` → email via Brevo a `CONTACT_EMAIL` (rate limit, honeypot, zod)
+- Contatti: nessun modulo, pagina con email (mailto precompilato) e telefono
 - Cookie banner (Accetta / Rifiuta / Personalizza): GA4 e Google Maps solo dopo consenso
 - SEO: title/description per pagina, hreflang, canonical, Open Graph, JSON-LD `Hotel`, `sitemap.xml`, `robots.txt`
-- `/health` per il healthcheck Railway; alert email su errori 5xx e invio modulo fallito
+- `/health` per il healthcheck Railway; alert email su errori 5xx (Brevo)
 
 ## Sviluppo
 ```bash
